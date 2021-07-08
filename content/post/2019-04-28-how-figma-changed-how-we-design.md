@@ -1,14 +1,14 @@
 ---
 title: How Figma changed the way we designed Novela
 date: 2019-04-28
-hero: /images/hero-5.jpg
-excerpt: To understand why Figma is the best design tool for our company, you have to understand what we do. As a designer.
+hero: "/images/hero-5.jpg"
+excerpt: To understand why Figma is the best design tool for our company, you have
+  to understand what we do. As a designer.
 timeToRead: 8
 authors:
-  - Thiago Costa
+- Thiago Costa
 
 ---
-
 To understand why Figma is the best design tool for our company, you have to understand what we do. As a designer, I’ve been crafting digital experiences for the past ten years, having contributed to the growth of companies such as Hopper, Lightspeed, and Breather, among others. Throughout this journey, I’ve had the opportunity to meet the most talented designers, engineers, growth marketers, and build a world-class team to develop startups worldwide. We call this team Narative.
 
 Narative is a studio based in 3 different cities around the world; so right off the bat we’re already facing a challenge; geography.
@@ -34,7 +34,7 @@ I probably saved more than 30GB of disk space by migrating my projects to Figma,
 
 One of the best features of a web-based software is the fact you’re no longer stuck with an operating system. You can run it right from the browser or from their native app, that’s essentially a wrapper. I’m able to seamlessly start a project on my iMac Pro at my home office, and continue on my Surface Book 2 on the go. That’s huge.
 
-Additionally, you’ll always have the latest version, with no need to download painful software updates. The “cloud” is finally making sense in 2018.
+> Additionally, you’ll always have the latest version, with no need to download painful software updates. The “cloud” is finally making sense in 2018.
 
 ## Performance
 
@@ -172,7 +172,7 @@ Gatsby requires Node to be installed to run the Bootstrap and Build sequences. U
 
 ### Step 1
 
-During the Bootstrap sequence, which occurs every time you run \$ gatsby develop, there are about 20 events that fire ranging from validating your gatsby-config.js to building the data schemas and pages for your site. For example, the Bootstrap sequence is where Gatsby will create pages. If you want an in depth look of all 20 Bootstrap steps Swyx shared a fantastic Gist that goes into more detail.
+During the Bootstrap sequence, which occurs every time you run $ gatsby develop, there are about 20 events that fire ranging from validating your gatsby-config.js to building the data schemas and pages for your site. For example, the Bootstrap sequence is where Gatsby will create pages. If you want an in depth look of all 20 Bootstrap steps Swyx shared a fantastic Gist that goes into more detail.
 
 ### Step 2
 
@@ -184,14 +184,14 @@ And finally, once the generated files are deployed, Gatsby lives in the browser.
 
 What’s important to remember is that Gatsby’s lifecycle can be aggregated into 3 main sequences:
 
-- Bootstrap
-- Build
-- Browser
-- These three sequences makeup the Gatsby lifecycle.
+* Bootstrap
+* Build
+* Browser
+* These three sequences makeup the Gatsby lifecycle.
 
 Parts of the lifecycle are visible when running $ gatsby develop
 A peak into the Gatsby lifecycle when running $ gatsby develop
-A peak into the Gatsby lifecycle when running \$ gatsby develop
+A peak into the Gatsby lifecycle when running $ gatsby develop
 If you’re familiar with React and the component lifecycle, Gatsby’s lifecycle is almost the same concept. Just like React’s lifecycle, Gatsby exposes hooks for developers to build on top of. Those lifecycle hooks are accessed through Gatsby specific files such as gatsby-node.js, gatsby-browser.js and gatsby-ssr.js.
 
 What are the Gatsby specific files for?
@@ -205,17 +205,17 @@ Gatsby runs a Node process when you develop or build your website and uses Webpa
 
 Everything that occurs during the Bootstrap and Build sequences occurs in gatsby-node.js. This means it’s the perfect place to create pages dynamically based off data from a source plugin or modify Gatsby’s Webpack or Babel configs.
 
-For example, if you want to move some files manually, such as a Netlify \_redirects file, a good place to do it is in your gatsby-node.js file at the onPostBuild lifecycle hook.
+For example, if you want to move some files manually, such as a Netlify _redirects file, a good place to do it is in your gatsby-node.js file at the onPostBuild lifecycle hook.
 
 From experience, most of my time has revolved around handling data and building pages in gatsby-node.js. This file quickly becomes the piping of your entire website.
 
 ## Examples of gatsby-node.js hooks:
 
-- createPages
-- onCreateBabelConfig
-- onCreateWebpackConfig
-- onPostBuild
-- gatsby-ssr.js
+* createPages
+* onCreateBabelConfig
+* onCreateWebpackConfig
+* onPostBuild
+* gatsby-ssr.js
 
 When you think Server Side Rendering you think of a server that takes in requests and dynamically builds pages and sends it to the client. Gatsby doesn’t do that, but it does server side render — it generates all the pages during build time.
 
@@ -223,10 +223,10 @@ Naturally, gatsby-ssr.js allows developers to hook into that lifecycle. In my ex
 
 ## Examples of gatsby-ssr.js hooks:
 
-- onPreRenderHTML
-- onRenderBody
-- replaceRenderer
-- gatsby-browser.js
+* onPreRenderHTML
+* onRenderBody
+* replaceRenderer
+* gatsby-browser.js
 
 Gatsby is a static site that loads a dynamic application after initial load, which means you get the benefits of a static site in a web application. gatsby-browser.js provides convenient hooks to deal with app loading, route updates, service worker updates, scroll positioning, and more.
 
@@ -234,11 +234,11 @@ Everything that occurs after your static site has loaded can be hooked in gatsby
 
 ## Examples of gatsby-browser.js hooks:
 
-- onClientEntry
-- onRouteUpdate
-- onServiceWorkerInstalled
-- registerServiceWorker
-- shouldUpdateScroll
+* onClientEntry
+* onRouteUpdate
+* onServiceWorkerInstalled
+* registerServiceWorker
+* shouldUpdateScroll
 
 ## Conclusion
 
